@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Hero from "../components/Hero";
 import Row from "../components/Row";
 import Col from "../components/Col";
-import { Container } from "react-bootstrap";
+// import { Container } from "react-bootstrap";
 import EntryForm from "../components/Entry/EntryForm";
 import EntryList from "../components/Entry/EntryList";
 import "../index.css";
@@ -38,13 +38,13 @@ function Journal() {
           Welcome to Your personal Journal
         </h1>
       </Hero>
-      <div className="container">
+      {/* <div className="container"> */}
         <div className="content">
-          <Container>
+          {/* <Container> */}
             <Row>
               <Col size="md-12">
                 <div className="entry-form">
-                  <div className="entry-form-container">
+                  {/* <div className="entry-form-container"> */}
                     <EntryForm
                       onSubmit={addEntry}
                       entryToEdit={
@@ -52,7 +52,7 @@ function Journal() {
                       }
                     />
                   </div>
-                </div>
+                {/* </div> */}
               </Col>
               <Col size="md-12">
                 <div className="entry-list-container">
@@ -64,10 +64,10 @@ function Journal() {
                 </div>
               </Col>
             </Row>
-          </Container>
+          {/* </Container> */}
         </div>
       </div>
-    </div>
+    // </div>
   );
 }
 export default Journal;

@@ -75,7 +75,7 @@ function List() {
           Welcome to Your Food Log!
         </h1>
       </Hero>
-      <Container style={{ backgroundColor: "#f5d76e" }}>
+      <Container style={{ backgroundColor: "burlywood" }}>
         <Row>
           <Col size="md-12">
             <h2 style={{ textAlign: "center" }}>Add Food Item:</h2>

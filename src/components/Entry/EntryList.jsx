@@ -1,9 +1,10 @@
 import React from "react";
-import { FaTrashAlt, FaEdit } from "react-icons/fa";
+// import { FaTrashAlt, FaEdit } from "react-icons/fa";
 import "./index.css";
 
 const EntryList = ({ entries, onEdit, onDelete }) => {
   return (
+    <div className="list">
       <div className="table-responsive">
         <table className="table table-striped table-bordered">
           <thead className="thead-dark">
@@ -17,23 +18,23 @@ const EntryList = ({ entries, onEdit, onDelete }) => {
           <tbody>
           {entries && entries.map((entry, index) => (
   entry && <tr key={index}>
-    <td className="larger-cell">{entry.title}</td>
+    <td className="large-cell">{entry.title}</td>
     <td className="larger-cell">{entry.description}</td>
-    <td>{entry.date}</td>
-    <td>
+    <td className="small-cell">{entry.date}</td>
+    <td className="small-cell">
     <button
             type="button"
-            className="edit-button"
+            className="small-cell-button"
             onClick={() => onEdit(index)}
           >
-            <FaEdit className="mb-1"/>
+            Edit
           </button>
       <button
             type="button"
-            className="delete-button"
+            className="small-cell-delete-btn"
             onClick={() => onDelete(index)}
           >
-            <FaTrashAlt className="mb-1"/>
+           Delete
           </button>
     </td>
   </tr>
@@ -41,6 +42,7 @@ const EntryList = ({ entries, onEdit, onDelete }) => {
 
           </tbody>
         </table>
+      </div>
       </div>
     );
 };
